@@ -2,7 +2,7 @@
 
 **An AI grading assistant for professors — upload student submissions, grade them against a rubric with AI, automatically run and test student code, and produce editable feedback and exportable reports.**
 
-Production-grade full-stack app built solo, with security hardening applied before launch.
+Production-grade full-stack app built solo, with a self-directed security review before launch.
 
 <!-- TODO: hero screenshot or demo GIF (grading a submission → feedback) -->
 <!-- 🔗 Live demo: <URL> -->
@@ -41,13 +41,13 @@ flowchart LR
 
 **Backend** — Next.js API routes with auth + ownership verification on every route; PostgreSQL via Prisma; NextAuth; AWS S3 with presigned URLs; Judge0 for sandboxed code execution; Google Drive import; Resend email; Sentry monitoring.
 
-**Security** — hardened with reference to the OWASP top 10: authenticated + ownership-checked routes, file-upload content-type allowlist with a 50MB cap, hashed passwords, CSRF protection, security headers (HSTS, X-Frame-Options, Referrer-Policy), and per-user rate limiting on every AI endpoint. Built to keep student academic data private; not independently certified for FERPA compliance.
+**Security** — self-reviewed against the OWASP top 10 with AI assistance (no third-party audit): authenticated + ownership-checked routes, file-upload content-type allowlist with a 50MB cap, hashed passwords, CSRF protection, security headers (HSTS, X-Frame-Options, Referrer-Policy), and per-user rate limiting on every AI endpoint. Built to keep student academic data private; not independently certified for FERPA compliance.
 
 ## Notable engineering decisions
 
 - **Grading that runs the code** — integrating Judge0 means code assignments are assessed by execution against test cases, not just static review.
 - **Human-in-the-loop by design** — AI proposes; the professor reviews and edits before anything is finalized.
-- **Security-first** — a pre-launch hardening pass covering auth, authorization, input validation, rate limiting, and headers.
+- **Security-first** — a pre-launch self-review, worked through the OWASP top 10 with Claude, covering auth, authorization, input validation, rate limiting, and headers.
 
 ## Tech stack
 
