@@ -41,7 +41,7 @@ flowchart LR
 
 **Backend** — Next.js API routes with auth + ownership verification on every route; PostgreSQL via Prisma; NextAuth; AWS S3 with presigned URLs; Judge0 for sandboxed code execution; Google Drive import; Resend email; Sentry monitoring.
 
-**Security** — self-reviewed against the OWASP top 10 with AI assistance (no third-party audit): authenticated + ownership-checked routes, file-upload content-type allowlist with a 50MB cap, hashed passwords, CSRF protection, security headers (HSTS, X-Frame-Options, Referrer-Policy), and per-user rate limiting on every AI endpoint. Built to keep student academic data private; not independently certified for FERPA compliance.
+**Security** — self-reviewed against the OWASP top 10 with AI assistance (no third-party audit): authenticated + ownership-checked routes, file-upload content-type allowlist with a 50MB cap, hashed passwords, CSRF protection, security headers (HSTS, X-Frame-Options, Referrer-Policy), and per-user rate limiting on every AI endpoint. Built to keep student academic data private.
 
 ## Notable engineering decisions
 
